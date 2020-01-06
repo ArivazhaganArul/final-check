@@ -42,7 +42,7 @@ public class RemoveFavoriteServlet extends HttpServlet {
 			RequestDispatcher rd = request.getRequestDispatcher("ShowFavorite");
 			rd.forward(request, response);
 		} catch (Exception ex) {
-			request.getRequestDispatcher("cart-empty.jsp").forward(request, response);
+			request.getRequestDispatcher("favorites-empty.jsp").forward(request, response);
 
 		}
 
