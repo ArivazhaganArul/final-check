@@ -45,7 +45,7 @@ public class ShowMovieListAdminServlet extends HttpServlet {
 
 			rd.forward(request, response);
 		} catch (Exception e) {
-			System.out.println("Exception" + e);
+			
 		}
 	}
 

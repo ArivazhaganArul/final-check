@@ -43,7 +43,7 @@ public class ShowMovieListCustomerServlet extends HttpServlet {
 			rd.forward(request, response);
 
 		} catch (Exception ex) {
-			System.out.println(ex);
+			
 		}
 	}
 
