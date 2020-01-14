@@ -14,7 +14,14 @@ insert into movie values (1, 'Avatar', 2787965087, 'Yes','2017-03-15','Science F
 -- View Movie
 -- -----------------------------------------------------
 
-select *from movie;
+select  
+m_title as Title,
+m_boxoffice as BoxOffice,
+m_active as Active,
+m_date_of_launch as DateOfLaunch ,
+m_genre as Genre,
+m_hasteaser as HasTeaser
+from movie;
 
 -- -----------------------------------------------------
 -- update movie
@@ -31,14 +38,14 @@ insert into user (us_name) values ('Tony'),('Stark');
 -- -----------------------------------------------------
 -- View user
 -- -----------------------------------------------------
-select *from user;
+select us_id as ID , us_name as Name from user;
 
 -- --------------------------------------------------------------------------
 -- favorites list
 -- --------------------------------------------------------------------------
 
 select m_title, m_hasTeaser, m_boxOffice, m_genre from movie
-where m_active ='yes' and m_date_of_launch <= (select(curdate()));
+where m_active ='yes' and m_date_of_launch <= (curdate());
 
 -- --------------------------------------------------------------------------
 -- Insert Values in favorites
@@ -69,7 +76,11 @@ where ft_us_id=1;
 -- view favorites
 -- ------------------------------------------------------
 
-select * from favorites;
+select 
+ft_id as FavoriteId,
+ft_us_id as FavUserId,
+ft_mv_id as FavMovieId
+from favorites;
 
 -- -----------------------------------------------------
 -- Delete Item From favorites
