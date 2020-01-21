@@ -18,7 +18,7 @@ public class FavoriteDaoCollectionImplTest {
 	}
 
 	public static void testAddFavorite() throws FavoriteEmptyException {
-		FavoriteDao favoriteDao = new FavoriteDaoCollectionImpl();
+		FavoriteDao favoriteDao = new FavoriteDaoSqlImpl();
 		favoriteDao.addFavorite(1, 2L);
 		favoriteDao.addFavorite(1, 3L);
 		favoriteDao.addFavorite(1, 5L);
@@ -27,7 +27,7 @@ public class FavoriteDaoCollectionImplTest {
 	}
 
 	public static void testGetAllFavorite() throws FavoriteEmptyException {
-		FavoriteDao favoriteDao = new FavoriteDaoCollectionImpl();
+		FavoriteDao favoriteDao = new FavoriteDaoSqlImpl();
 		try {
 			List<Movie> movieListCustomer = favoriteDao.getAllFavorite(1);
 			System.out.println("Favorites:");
@@ -43,7 +43,7 @@ public class FavoriteDaoCollectionImplTest {
 	}
 
 	public static void testDeleteFavorite() {
-		FavoriteDao favoriteDao = new FavoriteDaoCollectionImpl();
+		FavoriteDao favoriteDao = new  FavoriteDaoSqlImpl();
 		favoriteDao.deleteFavorite(1, 2L);
 
 	}
